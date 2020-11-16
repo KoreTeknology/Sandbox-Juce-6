@@ -5,7 +5,7 @@
 
   ==============================================================================
 */
-#include "CpuMeter.h"
+
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 
@@ -17,8 +17,6 @@ CascadetutoPluginAudioProcessorEditor::CascadetutoPluginAudioProcessorEditor (Ca
 	// Main BG large Image (1250x250)
 	mBackgroundImage = juce::ImageCache::getFromMemory(BinaryData::rackU_procesor_1250_v2render_png, BinaryData::rackU_procesor_1250_v2render_pngSize);
 
-	// ADD Cpu Metering -> s <float>
-	addAndMakeVisible(mcpum);
 
 	//----------------------------------------------------------------------
 	// ADD first combobox > Param > Choice processor node
@@ -86,8 +84,6 @@ void CascadetutoPluginAudioProcessorEditor::paint (juce::Graphics& g)
 
 void CascadetutoPluginAudioProcessorEditor::resized()
 {
-	// PLACE Bottom line component
-	mcpum.setBounds(0, 235, 600, 15);
 
 	// PLACE Combobox 1 + Buttons
 	cbox1.setBounds(110, 150, 120, 20);

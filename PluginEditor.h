@@ -8,7 +8,6 @@
 
 #pragma once
 
-#include "CpuMeter.h"
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
 
@@ -28,7 +27,6 @@ public:
 
 
 private:
-	CpuMeter mcpum;
 	Image mBackgroundImage;
 
 	//----------------------------------------------------------------------
